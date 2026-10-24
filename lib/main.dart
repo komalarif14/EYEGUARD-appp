@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'theme.dart';
+//import 'theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,91 +28,28 @@ class MyApp extends StatelessWidget {
           title: Text('my app'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
-          children: [
-            Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-                  Container(
-                  //margin: EdgeInsets.all(10),
-                  color: Colors.blueAccent,
-                  height: 100,
-                  width: 100,
-                  child: textNew('bs it'),
-                
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          
+           children: [
+              TextField(
+                decoration: InputDecoration(
+                 border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10)
+                 ) 
+                ),
               ),
-              Container(
-                //margin: EdgeInsets.all(10),
-              color: Colors.blue,
-              height: 100,
-              width: 100,
-             child: textNew('bs it'),
-              ),
-              Container(
-               // margin: EdgeInsets.all(10),
-              color: Colors.green,
-              height: 100,
-              width: 100,
-               child: textNew('bs it'),
-
-              ),
-
-               Container(
-                //margin: EdgeInsets.all(10),
-              color: Colors.orange,
-              height: 100,
-              width: 100,
-              ),
-              Container(
-               // margin: EdgeInsets.all(10),
-              color: Colors.purple,
-              height: 100,
-              width: 100,
-              ),
-             ],
-            ),
-            Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              //margin: EdgeInsets.all(10),
-              color: Colors.black,
-              height: 100,
-              width: 100,
-
-              ),
-              Container(
-                //margin: EdgeInsets.all(10),
-              color: Colors.blue,
-              height: 100,
-              width: 100,
-              ),
-              Container(
-               // margin: EdgeInsets.all(10),
-              color: Colors.green,
-              height: 100,
-              width: 100,
-              ),
-
-               Container(
-                //margin: EdgeInsets.all(10),
-              color: Colors.orange,
-              height: 100,
-              width: 100,
-              ),
-              Container(
-               // margin: EdgeInsets.all(10),
-              color: Colors.purple,
-              height: 100,
-              width: 100,
-              ),
-           ],
-        ),
-          ],
+             TextField(),
+             ElevatedButton(onPressed: (){}, child: Text('login'))
+            
+           ] , 
+         ),
+         
+          
 
         )
-     )
-    );
+     );
+    
     
       
   }
