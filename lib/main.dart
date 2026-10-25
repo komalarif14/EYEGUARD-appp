@@ -27,31 +27,37 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.red,
           title: Text('my app'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
+        body: Center(
           
-           children: [
-              TextField(
-                decoration: InputDecoration(
-                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10)
-                 ) 
-                ),
+        child: Container(
+              width: 200,
+              child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+             // crossAxisAlignment: CrossAxisAlignment.end,
+              
+               children: [
+                  TextField(
+                    decoration: InputDecoration(
+                     enabledBorder: OutlineInputBorder() 
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                 TextField(
+                  decoration: InputDecoration(
+                     enabledBorder: OutlineInputBorder() )
+                 ),
+                 SizedBox(height: 10,),
+                 ElevatedButton(onPressed:(){}, child: Text('login')
+                 )
+               ],
               ),
-             TextField(),
-             ElevatedButton(onPressed: (){}, child: Text('login'))
+            ),
+                
+        ) 
+             )
             
-           ] , 
-         ),
-         
           
-
-        )
-     );
-    
-    
-      
+        );
   }
 }
 
