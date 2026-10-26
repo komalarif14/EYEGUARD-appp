@@ -1,64 +1,91 @@
+import 'package:eyeguard_appp/theme.dart';
 import 'package:flutter/material.dart';
-//import 'theme.dart';
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
 
-void main() {
-  runApp(const MyApp());
+  @override
+  State<MyApp> createState() => _MyAppState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
- // Widget textNew(String abc){
-   // return Text(
-   //   abc,
-    //  style: TextStyle(
-     //   color: Colors.red,
-     //   fontSize: 20
-     // ),
-    //);
- // }
-  
-
-  
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
+      home:Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text('my app'),
-        ),
-        body: Center(
-          
-        child: Container(
-              width: 200,
-              child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-             // crossAxisAlignment: CrossAxisAlignment.end,
-              
-               children: [
-                  TextField(
-                    decoration: InputDecoration(
-                     enabledBorder: OutlineInputBorder() 
-                    ),
-                  ),
-                  SizedBox(height: 10,),
-                 TextField(
-                  decoration: InputDecoration(
-                     enabledBorder: OutlineInputBorder() )
-                 ),
-                 SizedBox(height: 10,),
-                 ElevatedButton(onPressed:(){}, child: Text('login')
-                 )
-               ],
-              ),
-            ),
+          title: Text("test"),
+          backgroundColor: Colors.white,),
+          body:Row(
+            children: [
+              Expanded(
+                child: Column(
+                  children: [
+                          
+                    Expanded(child: Container(
+                      
+                      color: Colors.red,)
                 
-        ) 
-             )
-            
-          
-        );
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                     // height:200
+                      
+                      color: Colors.green, 
+                )
+                    ),
+                    Expanded(child: Container(
+                     // height:200,
+                      
+                      color: Colors.yellow, 
+                )
+                    ),
+                
+                
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Column(
+                            children: [
+                 Expanded(child: Container(
+                  
+                  color: Colors.blue,)
+                
+                ), Expanded(child: Container(
+                  
+                  color: Colors.black,)
+                
+                ),
+                
+                             
+                Expanded(child: Container(
+                  
+                  color: Colors.orange,)
+                
+                ),
+                Expanded(child: Container(
+                  
+                  color: Colors.purple,)
+                
+                ),
+                
+                
+                            
+                          
+                            ],
+                          ),
+              )
+      //  ),
+      
+   // );
+            ],
+          )
+      ),
+      
+    );
   }
 }
-
-      
