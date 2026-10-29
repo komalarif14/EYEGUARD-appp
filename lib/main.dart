@@ -1,4 +1,3 @@
-import 'package:eyeguard_appp/theme.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp(MyApp());
@@ -14,78 +13,73 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Scaffold(
+      home: Scaffold(
         appBar: AppBar(
-          title: Text("test"),
-          backgroundColor: Colors.white,),
-          body:Row(
-            children: [
-              Expanded(
-                child: Column(
-                  children: [
-                          
-                    Expanded(child: Container(
-                      
-                      color: Colors.red,)
-                
+          title: Text('BS IT'),
+        ),
+        body:Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [Colors.blue , Colors.green,Colors.yellow])
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              children: [
+                Text('welcome back', style: TextStyle(
+                color: Colors.brown,
+                fontWeight: FontWeight.bold,
+                fontSize: 40,),
+                ), 
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    border:OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.email),
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: "enter your email",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    filled:true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(Icons.password),
+                    hintText: "enter your password",
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors:[Colors.purple , Colors.amber,])
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
                     ),
-                    Expanded(
-                      flex: 3,
-                      child: Container(
-                     // height:200
-                      
-                      color: Colors.green, 
+                    onPressed: (){}, child: Text('login')
+                    ),
                 )
-                    ),
-                    Expanded(child: Container(
-                     // height:200,
-                      
-                      color: Colors.yellow, 
-                )
-                    ),
                 
                 
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Column(
-                            children: [
-                 Expanded(child: Container(
-                  
-                  color: Colors.blue,)
-                
-                ), Expanded(child: Container(
-                  
-                  color: Colors.black,)
-                
-                ),
-                
-                             
-                Expanded(child: Container(
-                  
-                  color: Colors.orange,)
-                
-                ),
-                Expanded(child: Container(
-                  
-                  color: Colors.purple,)
-                
-                ),
-                
-                
-                            
-                          
-                            ],
-                          ),
-              )
-      //  ),
-      
-   // );
-            ],
-          )
+             ],
+            ),
+          ),
+        )
       ),
-      
     );
   }
 }
